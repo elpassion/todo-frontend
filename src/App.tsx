@@ -1,30 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { JsonPresenter } from './components/JsonPresenter';
+import { Link, RouteComponentProps, Router } from "@reach/router";
+import React from "react";
+import "./App.css";
+import { JsonPresenter } from "./components/JsonPresenter";
+import logo from "./logo.svg";
+
+const Home: React.FC<RouteComponentProps> = () => <div>Home</div>;
 
 const App: React.FC = () => {
   return (
     <>
-   <JsonPresenter/>
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+        <Home path="/foo" />
+      </Router>
+
+      <JsonPresenter />
     </>
   );
-}
+};
 
 export default App;
