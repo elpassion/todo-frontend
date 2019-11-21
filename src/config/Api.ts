@@ -10,4 +10,8 @@ export class Api {
     baseURL: process.env.REACT_APP_API_URL,
     headers: this.headers
   });
+
+  public async foo(): Promise<string> {
+      return 'foo elo';
+  }
 }

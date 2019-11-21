@@ -1,9 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { JsonPresenter } from './components/JsonPresenter';
 
 const App: React.FC = () => {
   return (
+    <>
+   <JsonPresenter/>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -20,6 +23,7 @@ const App: React.FC = () => {
         </a>
       </header>
     </div>
+    </>
   );
 }
 
