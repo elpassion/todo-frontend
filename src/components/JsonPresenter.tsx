@@ -6,7 +6,8 @@ export const JsonPresenter = () => {
   const [fileContent, setFileContent] = useState("");
 
   const call = async () => {
-    setFileContent(await api.foo());
+    const { message } = await api.getWelcomeMessage();
+    setFileContent(message);
   };
 
   return (
