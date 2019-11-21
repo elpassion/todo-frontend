@@ -1,8 +1,7 @@
-import { Link, RouteComponentProps, Router } from "@reach/router";
+import { RouteComponentProps, Router } from "@reach/router";
 import React from "react";
 import "./App.css";
-import { JsonPresenter } from "./components/JsonPresenter";
-import logo from "./logo.svg";
+import { JsonPresenter } from "./components";
 
 const Home: React.FC<RouteComponentProps> = () => <div>Home</div>;
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Api } from "../config/Api";
+import { Api } from "../../config/Api";
 
 export const JsonPresenter = () => {
   const api = new Api();
@@ -14,7 +14,9 @@ export const JsonPresenter = () => {
     <>
       <div>elo</div>
       <button onClick={call}>Call API</button>
-      {fileContent && <div>{fileContent} </div>}
+      {fileContent && (
+        <div className="json-presenter__message">{fileContent} </div>
+      )}
     </>
   );
 };
